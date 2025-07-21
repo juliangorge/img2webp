@@ -29,9 +29,9 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
-# Check if script.sh exists
-if [[ ! -f "script.sh" ]]; then
-    print_error "script.sh not found in current directory!"
+# Check if img2webp.sh exists
+if [[ ! -f "img2webp.sh" ]]; then
+    print_error "img2webp.sh not found in current directory!"
     print_error "Please run this installer from the img2webp directory."
     exit 1
 fi
@@ -67,18 +67,18 @@ echo "3) Cancel"
 echo
 read -p "Enter your choice (1-3): " choice
 
-case $choice in
-    1)
-        print_status "Installing system-wide..."
-        sudo cp script.sh /usr/local/bin/img2webp
-        sudo chmod +x /usr/local/bin/img2webp
-        print_success "img2webp installed to /usr/local/bin/img2webp"
-        ;;
-    2)
-        print_status "Installing for current user..."
-        mkdir -p ~/.local/bin
-        cp script.sh ~/.local/bin/img2webp
-        chmod +x ~/.local/bin/img2webp
+    case $choice in
+        1)
+            print_status "Installing system-wide..."
+            sudo cp img2webp.sh /usr/local/bin/img2webp
+            sudo chmod +x /usr/local/bin/img2webp
+            print_success "img2webp installed to /usr/local/bin/img2webp"
+            ;;
+        2)
+            print_status "Installing for current user..."
+            mkdir -p ~/.local/bin
+            cp img2webp.sh ~/.local/bin/img2webp
+            chmod +x ~/.local/bin/img2webp
         
         # Check if ~/.local/bin is in PATH
         if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then

@@ -60,18 +60,18 @@ Download the WebP tools from [Google's official WebP page](https://developers.go
 2. **Make the script executable:**
 
    ```bash
-   chmod +x script.sh
+   chmod +x img2webp.sh
    ```
 
 3. **Install globally:**
 
    ```bash
    # Copy to a directory in your PATH
-   sudo cp script.sh /usr/local/bin/img2webp
+   sudo cp img2webp.sh /usr/local/bin/img2webp
 
    # Or install to your user's bin directory (no sudo required)
    mkdir -p ~/.local/bin
-   cp script.sh ~/.local/bin/img2webp
+   cp img2webp.sh ~/.local/bin/img2webp
 
    # Add to PATH if not already added (add this to your ~/.bashrc, ~/.zshrc, etc.)
    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
@@ -80,9 +80,9 @@ Download the WebP tools from [Google's official WebP page](https://developers.go
 
 ### Method 2: Manual Installation
 
-1. Download the `script.sh` file
-2. Make it executable: `chmod +x script.sh`
-3. Move it to a directory in your PATH or run it directly: `./script.sh`
+1. Download the `img2webp.sh` file
+2. Make it executable: `chmod +x img2webp.sh`
+3. Move it to a directory in your PATH or run it directly: `./img2webp.sh`
 
 ## Usage
 
@@ -170,7 +170,7 @@ Install the WebP tools as described in the Prerequisites section.
 Make sure the script is executable:
 
 ```bash
-chmod +x script.sh
+chmod +x img2webp.sh
 ```
 
 ## Contributing

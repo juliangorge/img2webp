@@ -117,12 +117,12 @@ Before submitting a PR, please test:
 
 ```bash
 # Test with sample images
-./script.sh test_image.jpg
-./script.sh test_directory/
+./img2webp.sh test_image.jpg
+./img2webp.sh test_directory/
 
 # Test error conditions
-./script.sh nonexistent_file
-./script.sh unsupported_file.txt
+./img2webp.sh nonexistent_file
+./img2webp.sh unsupported_file.txt
 ```
 
 ## Pull Request Guidelines
