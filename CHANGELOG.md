@@ -14,11 +14,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive documentation
 - Contributing guidelines
 - MIT License
+- `-r` flag to remove original files after conversion
+- Help system with `--help` option
+- Better command-line argument parsing
 
 ### Changed
 
 - Improved error handling and user feedback
 - Enhanced documentation with examples
+- Renamed `script.sh` to `img2webp.sh` for better clarity
 
 ## [1.0.0] - 2024-01-XX
 

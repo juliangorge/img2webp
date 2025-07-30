@@ -10,6 +10,7 @@ A simple and efficient bash script to convert images (JPG, JPEG, PNG) to WebP fo
 - 🔧 **Global installation** for easy access from anywhere
 - 💾 **High quality output** with 80% quality setting
 - 📝 **Verbose feedback** with success/error indicators
+- 🗑️ **Optional cleanup** - remove original files with `-r` flag
 
 ## Prerequisites
 
@@ -89,34 +90,47 @@ Download the WebP tools from [Google's official WebP page](https://developers.go
 ### Basic Usage
 
 ```bash
-# Convert a single image
+# Convert a single image (keep original)
 img2webp image.jpg
+
+# Convert and remove original file
+img2webp -r image.jpg
 
 # Convert multiple images
 img2webp image1.jpg image2.png photo.jpeg
 
-# Convert all images in a directory
-img2webp /path/to/images/
+# Convert all images in a directory and remove originals
+img2webp -r /path/to/images/
 
 # Convert images in multiple directories
 img2webp /path/to/photos/ /path/to/screenshots/
+
+# Show help
+img2webp --help
 ```
 
 ### Examples
 
 ```bash
-# Convert a single photo
+# Convert a single photo (keep original)
 img2webp vacation_photo.jpg
 # Output: vacation_photo.webp
+
+# Convert and replace original with WebP version
+img2webp -r vacation_photo.jpg
+# Output: vacation_photo.webp (original .jpg removed)
 
 # Convert all images in current directory
 img2webp .
 
+# Convert all images and remove originals
+img2webp -r .
+
 # Convert specific images with different formats
 img2webp logo.png banner.jpg icon.jpeg
 
-# Process a nested directory structure
-img2webp ~/Pictures/2023/
+# Process a nested directory structure and remove originals
+img2webp -r ~/Pictures/2023/
 ```
 
 ## How It Works
@@ -124,10 +138,12 @@ img2webp ~/Pictures/2023/
 The script:
 
 1. **Accepts multiple arguments** - files and/or directories
-2. **Validates file types** - only processes JPG, JPEG, and PNG files
-3. **Preserves structure** - maintains original file locations
-4. **Uses cwebp** - Google's WebP encoder with 80% quality
-5. **Provides feedback** - shows conversion progress and results
+2. **Supports options** - `-r` flag to remove original files after conversion
+3. **Validates file types** - only processes JPG, JPEG, and PNG files
+4. **Preserves structure** - maintains original file locations
+5. **Uses cwebp** - Google's WebP encoder with 80% quality
+6. **Provides feedback** - shows conversion progress and results
+7. **Safe removal** - only removes originals after successful conversion
 
 ## Output
 
